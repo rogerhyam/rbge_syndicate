@@ -1,0 +1,12 @@
+#rbge-syndicate-meta-box{
+    overflow:auto;
+}
+
+#rbge-syndicate-meta-box select{
+    width: 99%;
+    margin-bottom: 0.5em;
+}
+
+#rbge-syndicate-meta-box a.button{
+    float: right;
+}

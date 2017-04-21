@@ -1,0 +1,24 @@
+.botanics-stories-promo{
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    overflow: auto;
+    padding-bottom: 1em;
+}
+
+.botanics-stories-promo h3{
+    margin-top: 0;
+}
+
+.botanics-stories-promo img{
+    float: left;
+    margin-right: 1em;
+    border:solid gray 1px;
+}
+
+span.botanics-stories-link-back{
+    display: block;
+    float: right;
+    text-align: right;
+    padding-right: 1em;
+}
