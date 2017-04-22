@@ -1,9 +1,13 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+require_once('../../../wp-load.php');
+add_theme_support( 'post-thumbnails' );
+require_once('classes/RbgeSyndicateFront.php');
+$front = new RbgeSyndicateFront();
 
-ob_start("wrap_as_javascript");
+$front->write_javascript_include();
+
+/*
 
 // make use of wordpress functions
 require('../../../wp-load.php');
@@ -109,6 +113,8 @@ function wrap_as_javascript($buffer){
     
     return $out;
 }
+
+*/
 
 
 ?>
