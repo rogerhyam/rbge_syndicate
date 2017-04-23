@@ -35,7 +35,7 @@ class RbgeSyndicateAdmin {
        
        // first put in this post
        echo "<option value=\"$post->ID\">Embed this post</option>";
-       $js[0] = $script_start . 'post_id=' . $post->ID . $script_stop;
+
        
        // work through the categories
        $post_categories = wp_get_post_categories( $post->ID );
@@ -45,7 +45,6 @@ class RbgeSyndicateAdmin {
 	        $name = $cat->name;
 	        $slug = 'cat:' . $cat->slug;
             echo "<option value=\"$slug\">$name</option>";
-            $js[$slug] = $script_start . 'category=' . $cat->slug . $script_stop;
        }
        echo '</optgroup>';
       
@@ -58,7 +57,6 @@ class RbgeSyndicateAdmin {
             $name = $tag->name;
             $slug = 'tag:'. $tag->slug;
             echo "<option value=\"$slug\">$name</option>";
-            $js[$slug] = $script_start . 'tag=' . $tag->slug . $script_stop;
        }
 
        echo '</optgroup>';
@@ -70,17 +68,9 @@ class RbgeSyndicateAdmin {
        echo "<option value=\"large\">Image size: Large</option>";
        echo "<option value=\"full\">Image size: Original</option>";
        echo "</select>";
-       
-       
-       // we put the data on the document to be called later
-       echo '<script type="text/javascript">document.rbge_syndicate_date = ';
-       echo json_encode($js);
-       echo '</script>';
-      
       
        echo '<a class="button" id="rbge-syndicate-short-code-btn" >Short Code</a>'; 
        echo '<a class="button" id="rbge-syndicate-javascript-btn">Javascript</a>';
-      
        
        echo '</div>';
        

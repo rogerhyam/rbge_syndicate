@@ -40,7 +40,7 @@ class RbgeSyndicateFront {
             $args['post_status'] = 'publish'; // only published
 
             // if we have set the category then only from that category
-            if(isset($params['category'])) $args['category_name'] = $params['category'];
+            if(isset($params['cat'])) $args['category_name'] = $params['cat'];
 
             // if they have set a tag use that
             if(isset($params['tag'])) $args['tag'] = $params['tag'];

@@ -14,6 +14,8 @@ jQuery( document ).ready(function() {
        if(cat_tag_id.startsWith('tag:')) out += 'tag="' + cat_tag_id.substring(4) + '" ';
        if(cat_tag_id.startsWith('cat:')) out += 'cat="' + cat_tag_id.substring(4) + '" ';
        
+       out += 'image_size="' + imageSize + '" ';
+       
        out += ']';
        
        window.prompt("Copy to clipboard: Ctrl+C (or Cmd-C on Mac) then Enter", out);
@@ -32,6 +34,7 @@ jQuery( document ).ready(function() {
          if(!isNaN(parseInt(cat_tag_id))) out += 'post_id=' + cat_tag_id + '&amp;';
          if(cat_tag_id.startsWith('tag:')) out += 'tag=' + cat_tag_id.substring(4) + '&amp;';
          if(cat_tag_id.startsWith('cat:')) out += 'cat=' + cat_tag_id.substring(4) + '&amp;';
+         out += 'image_size=' + imageSize;
          out += '" ></script>';
          
          window.prompt("Copy to clipboard: Ctrl+C (or Cmd-C on Mac) then Enter", out);
