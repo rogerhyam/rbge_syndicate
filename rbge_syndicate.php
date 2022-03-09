@@ -12,7 +12,7 @@ License: GPL2
 if(is_admin()){
     // we are loading the admin panel
     require_once plugin_dir_path( __FILE__ ) . 'classes/RbgeSyndicateAdmin.php';
-    add_action('add_meta_boxes', array('RbgeSyndicateAdmin','init') );
+//    add_action('add_meta_boxes', array('RbgeSyndicateAdmin','init') );
     add_action('in_admin_header', array('RbgeSyndicateAdmin', 'help'));
     
     add_action('admin_enqueue_scripts', function(){
